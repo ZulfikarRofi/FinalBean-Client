@@ -13,20 +13,24 @@ const reducer = (state, action) => {
     
     const {type, payload} = action
 
-    switch(type) {
-        case "LOGIN_SUCCESS":
-            return{
-                isLogin: true,
-                user: payload
-            }
-        case "LOGOUT":
-            return{
-                isLogin: false,
-                user:{}
-            }
+    switch (type) {
+        case 'USER_SUCCESS':
+        case 'LOGIN_SUCCESS':
+          localStorage.setItem('token', payload.token);
+          return {
+            isLogin: true,
+            user: payload,
+          };
+        case 'AUTH_ERROR':
+        case 'LOGOUT':
+          localStorage.removeItem('token');
+          return {
+            isLogin: false,
+            user: {},
+          };
         default:
-            throw new Error()
-    }
+          throw new Error();
+      }
 }
 
 export const UserContextProvider = ({children}) => {

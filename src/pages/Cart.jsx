@@ -17,7 +17,7 @@ export default function Cart() {
           <p>Review Your Order</p>
         </div>
         <Row className='mt-5'>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={7}>
             <div>
               <div className='cartlist py-4'>
                 <Row>
@@ -27,14 +27,14 @@ export default function Cart() {
                       <div className='detailcartlist ps-3'>
                         <p className='fw-semibold mb-3' style={{fontSize:'22px'}}>Guatemala Beans</p>
                         <div className='counter'>
-                          <img src={minus} alt="minus" style={{width:'3%'}} onClick='' />
-                          <p className='pt-2 px-3 py-0 ms-2 fs-5 fw-bold' style={{backgroundColor:'#F6E6DA', width:'fit-content', }}>0</p>
-                          <img src={plus} alt="plus" className='ms-2' style={{width:'3%'}} onClick='' />
+                          <img src={minus} alt="minus" style={{width:'5%'}} onClick='' />
+                          <p className='mb-0 ms-2 py-1 px-2 fs-5 fw-bold' style={{backgroundColor:'#F6E6DA', width:'fit-content', }}>0</p>
+                          <img src={plus} alt="plus" className='ms-2' style={{width:'5%'}} onClick='' />
                         </div>
                       </div>
                       <div className='flexcolend'>
-                      <p className='fw-semibold fs-5 mb-5'>Rp. 300.900</p>
-                      <img src={trash} alt='trash' style={{width:'10%'}} onClick='' />
+                      <p className='fw-semibold fs-5 mb-3 mt-1'>Rp. 300.900</p>
+                      <img className='' src={trash} alt='trash' style={{width:'15%'}} onClick='' />
                       </div>
                     </div>
                   </div>
@@ -42,7 +42,7 @@ export default function Cart() {
               </div>
             </div>
           </Col>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={5}>
             <div className='cartlist py-4 between'>
               <div>
                 <p>Subtotal</p>

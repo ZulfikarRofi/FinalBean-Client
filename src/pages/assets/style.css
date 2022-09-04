@@ -77,11 +77,78 @@
 }
 .between {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+.flexrowcenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.fitContent {
+    width: fit-content;
+    height: 100%
 }
 .flexcolend {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: center;
+}
+
+/* Status Transaction - profile pages */
+.completed {
+    background-color: #613D2B;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.waiting {
+    background-color: #FF9900;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.success {
+    background-color: #8FFF00;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+/* */
+.button-red {
+    background-color: #FF0742;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    width: 100px;
+    height: fit-content;
+}
+.button-red:hover {
+    background-color: darkred;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    width: 100px;
+    height: fit-content;
+}
+.button-green {
+    background-color: #0ACF83;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    width: 100px;
+    height: fit-content;
+}
+.button-green:hover {
+    background-color: darkgreen;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    width: 100px;
+    height: fit-content;
 }

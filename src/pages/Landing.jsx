@@ -6,8 +6,16 @@ import { dataProduct } from '../components/dummy/dataProduct'
 import '../pages/assets/style.css'
 import convertRupiah from 'rupiah-format';
 import { Link } from 'react-router-dom';
+import { useQuery, useMutation } from 'react-query';
+import { API } from '../config/api';
 
 export default function Landing() {
+    // Fetching product data from database
+    let { data: products } = useQuery('productsCache', async () => {
+    const response = await API.get('/products');
+    return response.data.data;
+    });
+
   return (
     <div>
         <NavbarUser />
@@ -16,11 +24,11 @@ export default function Landing() {
                 <img src={banner} alt='banner' />
             </Row>
             <Row className='d-flex justify-content-center'>
-                {dataProduct?.map((item, index) => (
+                {products?.map((item, index) => (
                 <Col>
                     <Link to={`/detail/${item.id}`} className='text-decoration-none'>
                         <Card
-                        className="p-0 mb-2 cardproduct"
+                        className="p-0 mb-5 cardproduct"
                         style={{ width: "18rem", borderRadius:"0px"}}
                         >
                         <Card.Img variant="top" src={item.image} style={{borderRadius:'0'}} />

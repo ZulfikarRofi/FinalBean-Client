@@ -33,3 +33,9 @@
     width: 100%;
     height: 40px;
 }
+.inputbrown {
+    border:3px solid #613D2B;
+    background-color: #613D2B40;
+    color: #613D2B;
+    border-radius: 5px;
+}
